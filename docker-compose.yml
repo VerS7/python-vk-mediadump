@@ -1,0 +1,9 @@
+services:
+    mediadump-bot:
+        image: vk-mediadump:latest
+        container_name: vk-mediadump
+        restart: unless-stopped
+        build:
+            context: .
+        volumes:
+            - ./src/state:/app/state
